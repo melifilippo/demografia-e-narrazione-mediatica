@@ -47,7 +47,7 @@ Il lavoro usa solo `pandas`, `numpy`, `matplotlib` e `seaborn`, senza librerie d
 ## Dati
 
 - **ISTAT** (stranieri residenti per comune e Stato di cittadinanza): i file sono **inclusi** nel repository, in `dati_progetto/data/istat/Dati_RCS/`. Un file CSV per anno, con separatore `;`. Fonte: <https://demo.istat.it/app/?i=RCS>.
-- **CHANGE-IT** (articoli de la Repubblica): il file `repubblica.csv` **non è nella cartella del repository** per le dimensioni (supera i 240 MB, oltre il limite di GitHub per i singoli file), ma è scaricabile dalla Release `v1.0`: <https://github.com/melifilippo/Analisi_testi_repubblica_e_demografia/releases/download/v1.0/repubblica.csv>. Il file contiene tre colonne: `headline` (titolo), `full_text` (testo completo) e `url`. Dall'URL vengono ricavati anno e tipologia di ogni articolo.
+- **CHANGE-IT** (articoli de la Repubblica): il file `repubblica.csv` **non è nella cartella del repository** per le dimensioni (supera i 240 MB, oltre il limite di GitHub per i singoli file), ma è scaricabile dalla Release `v1.0`: <https://github.com/melifilippo/demografia-e-narrazione-mediatica/releases/download/v1.0/repubblica.csv>. Il file contiene tre colonne: `headline` (titolo), `full_text` (testo completo) e `url`. Dall'URL vengono ricavati anno e tipologia di ogni articolo.
   - Fonte: dataset CHANGE-IT, task di EVALITA 2020 (De Mattei, Cafagna, Dell'Orletta, Nissim, Gatt, 2020), <https://sites.google.com/view/change-it>.
   - Licenza: CC BY-NC-SA 4.0. Il file è ridistribuito qui alle stesse condizioni, per soli fini didattici e non commerciali.
 
@@ -67,8 +67,8 @@ dati_progetto/
 1. Scarica il repository (pulsante **Code → Download ZIP**, oppure con Git):
 
    ```bash
-   git clone https://github.com/melifilippo/Analisi_testi_repubblica_e_demografia.git
-   cd Analisi_testi_repubblica_e_demografia
+   git clone https://github.com/melifilippo/demografia-e-narrazione-mediatica.git
+   cd demografia-e-narrazione-mediatica
    ```
 
 2. Scarica `repubblica.csv` dalla Release `v1.0`. Crea la cartella `dati_progetto/data/CHANGE-it/` (nel repository non esiste, perché Git non conserva le cartelle vuote) e mettici il file.
