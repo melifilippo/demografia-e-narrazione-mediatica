@@ -1,0 +1,8 @@
+# Dati pesanti (non inclusi nel repository, vedi README)
+dati_progetto/
+
+# Python / Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
