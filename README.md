@@ -27,21 +27,21 @@ Il progetto è un'analisi esplorativa: i media funzionano da "specchio" della re
 
 ## Dati
 
-I dati **non sono inclusi** nel repository per le dimensioni (il solo `repubblica.csv` supera i 240 MB). Provengono dall'archivio `dati progetto.zip` fornito nel materiale del corso su Virtuale (<https://virtuale.unibo.it>). Per riprodurre il notebook, estrai l'archivio e posiziona la cartella `dati_progetto/` accanto al notebook, con questa struttura:
+I dati **non sono inclusi** nel repository per le dimensioni (il solo `repubblica.csv` supera i 240 MB). Sono reperibili alle fonti seguenti.
+
+- **CHANGE-IT** (articoli de la Repubblica): <https://sites.google.com/view/change-it>. Raccolta di articoli estratta nell'ambito del task CHANGE-IT di EVALITA 2020 (De Mattei, Cafagna, Dell'Orletta, Nissim, Gatt, 2020), distribuita con licenza CC BY-NC-SA 4.0. Il notebook usa un file CSV con tre colonne: `headline` (titolo), `full_text` (testo completo) e `url`. Dall'URL vengono ricavati anno e tipologia di ogni articolo.
+- **ISTAT** (stranieri residenti per comune e Stato di cittadinanza): <https://demo.istat.it/app/?i=RCS>. Un file CSV per anno, con separatore `;`.
+
+**Anni analizzati:** 2013–2019, il periodo in cui si concentrano gli articoli del corpus (con un picco nel 2016). L'indice di tono esclude il 2019, per il numero ridotto di articoli. Il notebook importa i file ISTAT di tutti gli anni dal 2002 al 2025 e poi filtra il periodo 2013–2019.
+
+Per riprodurre il notebook, posiziona i file accanto al notebook con questa struttura:
 
 ```
 dati_progetto/
 └── data/
     ├── CHANGE-it/repubblica.csv
-    └── istat/
-        ├── Dati_RCS/Dati_cittadinanza_<anno>.csv
-        └── comuni/elenco_comuni.csv
+    └── istat/Dati_RCS/Dati_cittadinanza_<anno>.csv   (un file per anno, 2002–2025)
 ```
-
-**Fonti**
-
-- **CHANGE-IT** (articoli de la Repubblica): raccolta di articoli estratta nell'ambito del task CHANGE-IT di EVALITA 2020 (De Mattei, Cafagna, Dell'Orletta, Nissim, Gatt, 2020). Pagina del task: <https://sites.google.com/view/change-it>. Licenza del dataset: CC BY-NC-SA 4.0. Il file `repubblica.csv` contiene titolo, testo completo e URL di ciascun articolo.
-- **ISTAT**: residenti in Italia per cittadinanza straniera e per luogo di nascita, per comune e ripartizione territoriale, anni 2002–2025. Il file `elenco_comuni.csv` associa a ogni comune i codici e le ripartizioni geografiche.
 
 ## Come eseguire
 
