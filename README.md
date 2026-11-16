@@ -140,7 +140,22 @@ dati_progetto/
 
 ## Come eseguire
 
-```bash
-pip install -r requirements.txt
-jupyter notebook Progetto_Programmazione.ipynb
-```
+1. Scarica il repository (pulsante **Code → Download ZIP**, oppure con Git):
+
+   ```bash
+   git clone https://github.com/melifilippo/Analisi_testi_repubblica_e_demografia.git
+   cd Analisi_testi_repubblica_e_demografia
+   ```
+
+2. Scarica `repubblica.csv` dalla Release `v1.0`. Crea la cartella `dati_progetto/data/CHANGE-it/` (nel repository non esiste, perché Git non conserva le cartelle vuote) e mettici il file.
+
+3. Installa le librerie e apri il notebook dalla cartella del repository:
+
+   ```bash
+   pip install -r requirements.txt
+   jupyter notebook Progetto_Programmazione.ipynb
+   ```
+
+Il notebook cerca i dati a partire dalla cartella da cui viene avviato: va quindi aperto dalla cartella principale del repository. L'esecuzione completa richiede circa un minuto e qualche GB di memoria.
+
+Per vedere solo i risultati non serve eseguire nulla: il notebook si apre direttamente su GitHub, con grafici e tabelle già visibili.
