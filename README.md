@@ -23,24 +23,23 @@ Il progetto è un'analisi esplorativa: i media funzionano da "specchio" della re
 ## Contenuto del repository
 
 - `Progetto_Programmazione.ipynb`: notebook finale con codice, grafici e commenti.
+- `dati_progetto/data/istat/Dati_RCS/`: dati ISTAT sui residenti per cittadinanza, un file CSV per anno (2002–2025).
 - `requirements.txt`: librerie necessarie.
 
 ## Dati
 
-I dati **non sono inclusi** nel repository per le dimensioni (il solo `repubblica.csv` supera i 240 MB). Sono reperibili alle fonti seguenti.
-
-- **CHANGE-IT** (articoli de la Repubblica): <https://sites.google.com/view/change-it>. Raccolta di articoli estratta nell'ambito del task CHANGE-IT di EVALITA 2020 (De Mattei, Cafagna, Dell'Orletta, Nissim, Gatt, 2020), distribuita con licenza CC BY-NC-SA 4.0. Il notebook usa un file CSV con tre colonne: `headline` (titolo), `full_text` (testo completo) e `url`. Dall'URL vengono ricavati anno e tipologia di ogni articolo.
-- **ISTAT** (stranieri residenti per comune e Stato di cittadinanza): <https://demo.istat.it/app/?i=RCS>. Un file CSV per anno, con separatore `;`.
+- **ISTAT** (stranieri residenti per comune e Stato di cittadinanza): i file sono **inclusi** nel repository, in `dati_progetto/data/istat/Dati_RCS/`. Un file CSV per anno, con separatore `;`. Fonte: <https://demo.istat.it/app/?i=RCS>.
+- **CHANGE-IT** (articoli de la Repubblica): il file `repubblica.csv` **non è incluso** per le dimensioni (supera i 240 MB, oltre il limite di GitHub). Fonte: <https://sites.google.com/view/change-it>. Raccolta di articoli estratta nell'ambito del task CHANGE-IT di EVALITA 2020 (De Mattei, Cafagna, Dell'Orletta, Nissim, Gatt, 2020), distribuita con licenza CC BY-NC-SA 4.0. Il notebook usa un file CSV con tre colonne: `headline` (titolo), `full_text` (testo completo) e `url`. Dall'URL vengono ricavati anno e tipologia di ogni articolo.
 
 **Anni analizzati:** 2013–2019, il periodo in cui si concentrano gli articoli del corpus (con un picco nel 2016). L'indice di tono esclude il 2019, per il numero ridotto di articoli. Il notebook importa i file ISTAT di tutti gli anni dal 2002 al 2025 e poi filtra il periodo 2013–2019.
 
-Per riprodurre il notebook, posiziona i file accanto al notebook con questa struttura:
+Per riprodurre il notebook, aggiungi il file di Repubblica in questo percorso:
 
 ```
 dati_progetto/
 └── data/
-    ├── CHANGE-it/repubblica.csv
-    └── istat/Dati_RCS/Dati_cittadinanza_<anno>.csv   (un file per anno, 2002–2025)
+    ├── CHANGE-it/repubblica.csv        (da aggiungere)
+    └── istat/Dati_RCS/                 (già nel repository)
 ```
 
 ## Come eseguire
