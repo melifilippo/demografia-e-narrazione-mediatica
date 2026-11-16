@@ -1,5 +1,5 @@
 # Dati pesanti (non inclusi nel repository, vedi README)
-dati_progetto/
+dati_progetto/data/CHANGE-it/
 
 # Python / Jupyter
 .ipynb_checkpoints/
