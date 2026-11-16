@@ -29,16 +29,18 @@ Il progetto è un'analisi esplorativa: i media funzionano da "specchio" della re
 ## Dati
 
 - **ISTAT** (stranieri residenti per comune e Stato di cittadinanza): i file sono **inclusi** nel repository, in `dati_progetto/data/istat/Dati_RCS/`. Un file CSV per anno, con separatore `;`. Fonte: <https://demo.istat.it/app/?i=RCS>.
-- **CHANGE-IT** (articoli de la Repubblica): il file `repubblica.csv` **non è incluso** per le dimensioni (supera i 240 MB, oltre il limite di GitHub). Fonte: <https://sites.google.com/view/change-it>. Raccolta di articoli estratta nell'ambito del task CHANGE-IT di EVALITA 2020 (De Mattei, Cafagna, Dell'Orletta, Nissim, Gatt, 2020), distribuita con licenza CC BY-NC-SA 4.0. Il notebook usa un file CSV con tre colonne: `headline` (titolo), `full_text` (testo completo) e `url`. Dall'URL vengono ricavati anno e tipologia di ogni articolo.
+- **CHANGE-IT** (articoli de la Repubblica): il file `repubblica.csv` **non è nella cartella del repository** per le dimensioni (supera i 240 MB, oltre il limite di GitHub per i singoli file), ma è scaricabile dalla Release `v1.0`: <https://github.com/melifilippo/Analisi_testi_repubblica_e_demografia/releases/download/v1.0/repubblica.csv>. Il file contiene tre colonne: `headline` (titolo), `full_text` (testo completo) e `url`. Dall'URL vengono ricavati anno e tipologia di ogni articolo.
+  - Fonte: dataset CHANGE-IT, task di EVALITA 2020 (De Mattei, Cafagna, Dell'Orletta, Nissim, Gatt, 2020), <https://sites.google.com/view/change-it>.
+  - Licenza: CC BY-NC-SA 4.0. Il file è ridistribuito qui alle stesse condizioni, per soli fini didattici e non commerciali.
 
 **Anni analizzati:** 2013–2019, il periodo in cui si concentrano gli articoli del corpus (con un picco nel 2016). L'indice di tono esclude il 2019, per il numero ridotto di articoli. Il notebook importa i file ISTAT di tutti gli anni dal 2002 al 2025 e poi filtra il periodo 2013–2019.
 
-Per riprodurre il notebook, aggiungi il file di Repubblica in questo percorso:
+Per riprodurre il notebook, scarica `repubblica.csv` dalla Release e mettilo in questo percorso:
 
 ```
 dati_progetto/
 └── data/
-    ├── CHANGE-it/repubblica.csv        (da aggiungere)
+    ├── CHANGE-it/repubblica.csv        (da scaricare dalla Release)
     └── istat/Dati_RCS/                 (già nel repository)
 ```
 
